@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #0F172A;
+  --color-accent: #38BDF8;
+  --color-surface: #F8FAFC;
+  --color-ink: #141414;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply antialiased;
+  }
+  
+  body {
+    @apply font-sans text-slate-900 bg-slate-50 selection:bg-sky-100 selection:text-sky-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-slate-900;
+  }
+}
+
+.glass-panel {
+  @apply backdrop-blur-2xl bg-white/60 border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.04)];
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-white/30 border border-white/30 hover:bg-white/60 transition-all duration-700;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-slate-950 via-slate-800 to-slate-600;
+}
+
+.section-padding {
+  @apply py-24 md:py-40 px-6 md:px-12 lg:px-24;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.mask-oval {
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+}
+
+.rail-text {
+  writing-mode: vertical-rl;
+  @apply uppercase tracking-[0.3em] text-[11px] font-semibold text-slate-500;
+}
+
+.slam-in {
+  animation: slamIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slamIn {
+  0% { transform: scale(1.1) translateY(40px); opacity: 0; filter: blur(10px); }
+  100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); }
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

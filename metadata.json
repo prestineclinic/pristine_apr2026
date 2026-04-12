@@ -1,0 +1,7 @@
+{
+  "name": "PristinePhysio - Expert Physiotherapy & Rehabilitation",
+  "description": "PristinePhysio is a trusted physiotherapy clinic in Bangalore offering expert care, pain relief, and rehabilitation for better movement and health.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

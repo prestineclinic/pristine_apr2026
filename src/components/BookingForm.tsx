@@ -36,27 +36,35 @@ export const BookingForm: React.FC = () => {
     setIsSubmitting(true);
     setSubmitError('');
     try {
+      const payload: Record<string, string> = {
+        name: data.name,
+        phone: data.phone,
+        service: data.service,
+        date: data.date,
+        time: data.time,
+        message: data.message || 'No additional notes',
+      };
+      if (data.email) payload.email = data.email;
+
       const response = await fetch('https://formspree.io/f/meolvqnv', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email || 'Not provided',
-          phone: data.phone,
-          service: data.service,
-          date: data.date,
-          time: data.time,
-          message: data.message || 'No additional notes',
-        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
       if (response.ok) {
         setIsSuccess(true);
         reset();
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
+        const body = await response.json().catch(() => null);
+        console.error('Booking submission failed', response.status, body);
         setSubmitError('Something went wrong. Please try again or call us at +91 6364 635 943.');
       }
-    } catch {
+    } catch (err) {
+      console.error('Booking submission network error', err);
       setSubmitError('Network error. Please try again or call us at +91 6364 635 943.');
     } finally {
       setIsSubmitting(false);

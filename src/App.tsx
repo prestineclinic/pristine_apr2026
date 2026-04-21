@@ -391,30 +391,28 @@ export default function App() {
             </div>
 
             {/* Scrolling Conditions */}
-            <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-10" />
-              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-10" />
-              <motion.div
-                animate={{ x: ["0%", "-50%"] }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                className="flex gap-6"
-              >
+            <div className="relative overflow-hidden">
+              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
+              <div className="marquee-track" aria-hidden="false">
                 {[...conditions, ...conditions].map((condition, i) => (
                   <div key={i} className="group flex-shrink-0 w-[280px]">
                     <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-slate-900 mb-4">
                       <img
                         src={condition.image}
                         alt={`${condition.name} treatment at Pristine Clinic physiotherapy, Bengaluru`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover"
                         loading="lazy"
                         decoding="async"
+                        width="280"
+                        height="210"
                       />
                     </div>
                     <h4 className="text-base font-display font-medium text-white mb-1">{condition.name}</h4>
                     <p className="text-sm text-slate-300 leading-relaxed">{condition.description}</p>
                   </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>

@@ -8,7 +8,7 @@ import { cn } from '../lib/utils';
 
 const bookingSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
+  email: z.string().email('Invalid email address').optional().or(z.literal('')),
   phone: z.string().min(10, 'Invalid phone number'),
   service: z.string().min(1, 'Please select a service'),
   date: z.string().min(1, 'Please select a date'),
@@ -41,7 +41,7 @@ export const BookingForm: React.FC = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: data.name,
-          email: data.email,
+          email: data.email || 'Not provided',
           phone: data.phone,
           service: data.service,
           date: data.date,
@@ -119,7 +119,7 @@ export const BookingForm: React.FC = () => {
         {/* Email */}
         <div className="space-y-2">
           <label className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-2">
-            <Mail size={14} className="text-primary" /> Email Address
+            <Mail size={14} className="text-primary" /> Email Address <span className="text-slate-400 normal-case tracking-normal">(optional)</span>
           </label>
           <input
             {...register('email')}
@@ -128,7 +128,7 @@ export const BookingForm: React.FC = () => {
               "w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none transition-all",
               errors.email && "border-red-500 focus:ring-red-500"
             )}
-            placeholder="Enter your email"
+            placeholder="Enter your email (optional)"
           />
           {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
         </div>

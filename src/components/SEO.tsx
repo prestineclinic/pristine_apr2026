@@ -50,10 +50,10 @@ export const SEO: React.FC<SEOProps> = ({
           "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "No 50, KHB Colony, Koramangala 8th Block",
+            "streetAddress": "No 50 hig, KHB Colony, Koramangala 8th Block, Koramangala",
             "addressLocality": "Bengaluru",
             "addressRegion": "Karnataka",
-            "postalCode": "560034",
+            "postalCode": "560095",
             "addressCountry": "IN"
           },
           "geo": {
@@ -65,8 +65,8 @@ export const SEO: React.FC<SEOProps> = ({
             {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-              "opens": "17:00",
-              "closes": "21:00"
+              "opens": "10:00",
+              "closes": "20:30"
             },
             {
               "@type": "OpeningHoursSpecification",

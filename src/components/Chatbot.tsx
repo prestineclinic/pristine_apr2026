@@ -15,11 +15,11 @@ const FAQ_LIST: FAQ[] = [
   },
   {
     question: "What are your clinic hours?",
-    answer: "We're open Monday to Saturday, 5 PM – 9 PM and Sunday 9 AM – 1 PM."
+    answer: "We're open Monday to Saturday, 10 AM – 8:30 PM and Sunday 9 AM – 1 PM."
   },
   {
     question: "Where is the clinic located?",
-    answer: "We're located at No 50, KHB Colony, Koramangala 8th Block, Bengaluru, 560034."
+    answer: "We're located at No 50 hig, KHB Colony, Koramangala 8th Block, Koramangala, Bengaluru, Karnataka 560095."
   },
   {
     question: "How do I book an appointment?",

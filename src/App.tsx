@@ -484,7 +484,7 @@ export default function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
                 <div className="space-y-4">
                   <p className="text-[11px] font-bold uppercase tracking-widest text-slate-300">Location</p>
-                  <p className="text-white font-normal">No 50, KHB Colony, Koramangala 8th Block, Bengaluru, 560034</p>
+                  <p className="text-white font-normal">No 50 hig, KHB Colony, Koramangala 8th Block, Koramangala, Bengaluru, Karnataka 560095</p>
                 </div>
                 <div className="space-y-4">
                   <p className="text-[11px] font-bold uppercase tracking-widest text-slate-300">Phone</p>
@@ -496,7 +496,7 @@ export default function App() {
                 </div>
                 <div className="space-y-4">
                   <p className="text-[11px] font-bold uppercase tracking-widest text-slate-300">Hours</p>
-                  <p className="text-white font-normal">Mon-Sat: 5PM - 9PM</p>
+                  <p className="text-white font-normal">Mon-Sat: 10AM - 8:30PM</p>
                   <p className="text-white font-normal">Sun: 9AM - 1PM</p>
                 </div>
               </div>

@@ -181,8 +181,10 @@ export default function App() {
               >
                 <img
                   src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?auto=format&fit=crop&q=80&w=1200"
-                  alt="Modern Clinic"
+                  alt="Physiotherapy treatment at Pristine Clinic, Koramangala Bengaluru"
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-slate-950/10" />
@@ -234,7 +236,9 @@ export default function App() {
                 <img
                   src="/images/posturepain.jpg"
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000"
-                  alt="Posture & Ergonomics"
+                  alt="Posture and ergonomics physiotherapy for desk professionals"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
@@ -290,7 +294,9 @@ export default function App() {
                 <img
                   src="/images/Osteopathy.jpg"
                   className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-1000"
-                  alt="Manual Therapy"
+                  alt="Manual therapy and osteopathy at Pristine Clinic Koramangala"
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
                 <div className="relative p-10 h-full flex flex-col justify-center space-y-4">
@@ -330,8 +336,10 @@ export default function App() {
                     <div className="aspect-square rounded-full overflow-hidden mask-oval bg-slate-200">
                       <img
                         src={service.image}
-                        alt={service.title}
+                        alt={`${service.title} service at Pristine Clinic, Koramangala Bengaluru`}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        loading="lazy"
+                        decoding="async"
                         referrerPolicy="no-referrer"
                       />
                     </div>
@@ -396,8 +404,10 @@ export default function App() {
                     <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-slate-900 mb-4">
                       <img
                         src={condition.image}
-                        alt={condition.name}
+                        alt={`${condition.name} treatment at Pristine Clinic physiotherapy, Bengaluru`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <h4 className="text-base font-display font-medium text-white mb-1">{condition.name}</h4>

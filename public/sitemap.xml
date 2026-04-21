@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://pristinephysio.com/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://pristinephysio.com/images/outsideclinic.jpg</image:loc>
+      <image:title>Pristine Clinic — Physiotherapy in Koramangala, Bengaluru</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pristinephysio.com/images/innerclinic.jpg</image:loc>
+      <image:title>Pristine Clinic treatment room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pristinephysio.com/images/physiotherapie.jpg</image:loc>
+      <image:title>Physiotherapy at Pristine Clinic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pristinephysio.com/images/Osteopathy.jpg</image:loc>
+      <image:title>Osteopathy at Pristine Clinic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pristinephysio.com/images/neuro_paediatric_rehab.jpg</image:loc>
+      <image:title>Neuro and pediatric rehabilitation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pristinephysio.com/images/pnf.jpeg</image:loc>
+      <image:title>PNF therapy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pristinephysio.com/images/pilates.jpg</image:loc>
+      <image:title>Pilates at Pristine Clinic</image:title>
+    </image:image>
+  </url>
+</urlset>
